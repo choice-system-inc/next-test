@@ -35,19 +35,29 @@ const CalculatorPage = () => {
   };
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
       <h1>Calculator</h1>
       <input
         type="text"
         value={number1}
         onChange={(e) => setNumber1(e.target.value)}
         placeholder="Number 1"
+        style={{
+          textAlign: 'center',
+          margin: '10px 0',
+          padding: '10px 20px',
+        }}
       />
       <input
         type="text"
         value={number2}
         onChange={(e) => setNumber2(e.target.value)}
         placeholder="Number 2"
+        style={{
+          textAlign: 'center',
+          margin: '10px 0',
+          padding: '10px 20px',
+        }}
       />
       <select value={operation} onChange={(e) => setOperation(e.target.value)}>
         <option value="">Select Operation</option>
